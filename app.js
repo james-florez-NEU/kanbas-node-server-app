@@ -1,4 +1,5 @@
-const express = require('express')
+import express from 'express'
+import Hello from "./hello.js"
 const app = express()
-app.get('/hello', (req, res) => {res.send('Hello World!')})
+Hello(app)
 app.listen(4000)
