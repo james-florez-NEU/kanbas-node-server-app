@@ -7,10 +7,10 @@ const assignment = {
     score: 0,
 };
 const todos = [
-    { id: 1, title: "Task 1", completed: false },
-    { id: 2, title: "Task 2", completed: true },
-    { id: 3, title: "Task 3", completed: false },
-    { id: 4, title: "Task 4", completed: true },
+    { id: 1, title: "Task 1", completed: "false" },
+    { id: 2, title: "Task 2", completed: "true" },
+    { id: 3, title: "Task 3", completed: "false" },
+    { id: 4, title: "Task 4", completed: "true" },
 ];
 
 const Lab5 = (app) => {
@@ -67,9 +67,9 @@ const Lab5 = (app) => {
             const completedTodos = todos.filter(
                 (t) => t.completed === completed);
             res.json(completedTodos);
-            return;
+        } else {
+            res.json(todos);
         }
-        res.json(todos);
     });
     app.get("/a5/todos/create", (req, res) => {
         const newTodo = {
