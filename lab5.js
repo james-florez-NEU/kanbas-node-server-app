@@ -101,7 +101,9 @@ const Lab5 = (app) => {
     app.get("/a5/todos/:id/title/:title", (req, res) => {
         const { id, title } = req.params;
         const todo = todos.find((t) => t.id === parseInt(id));
-        todo.title = title;
+        if (todo !== undefined) {
+            todo.title = title;
+        }
         res.json(todos);
     });
     app.put("/a5/todos/:id", (req, res) => {
