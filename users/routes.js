@@ -13,7 +13,9 @@ function UserRoutes(app) {
         res.json(currentUser);
     };
     const signout = (req, res) => { };
-    const account = async (req, res) => { };
+    const account = async (req, res) => {
+        res.json(currentUser);
+    };
     app.post("/api/users", createUser);
     app.get("/api/users", findAllUsers);
     app.get("/api/users/:userId", findUserById);
