@@ -3,7 +3,10 @@ let currentUser = null;
 function UserRoutes(app) {
     const createUser = async (req, res) => { };
     const deleteUser = async (req, res) => { };
-    const findAllUsers = async (req, res) => { };
+    const findAllUsers = async (req, res) => {
+        const users = await dao.findAllUsers();
+        res.json(users);
+    };
     const findUserById = async (req, res) => { };
     const updateUser = async (req, res) => {
         const { userId } = req.params;
