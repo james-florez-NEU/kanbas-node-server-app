@@ -9,7 +9,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import UserRoutes from "./users/routes.js";
 
-const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kanbas";
+const CONNECTION_STRING = "mongodb+srv://florezja:JlJZWqSQzBY282S4@cluster0.y6pwqaq.mongodb.net/kanbas?retryWrites=true&w=majority";
 mongoose.connect(CONNECTION_STRING);
 const app = express();
 app.use(
